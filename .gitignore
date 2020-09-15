@@ -1,0 +1,16 @@
+/node_modules/
+/public/build/
+
+npm-debug.log
+.DS_Store
+
+### VS Code ###
+.vscode/
+.prettierrc
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
