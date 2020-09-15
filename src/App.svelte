@@ -1,10 +1,12 @@
 <script>
-	export let name;
+import router from './router';
 </script>
 
+<!-- ToDo add header -->
 <main>
-	<h1>Hello {name}!</h1>
+  <svelte:component this={router.page} queryParams="{router.queryParams}" />
 </main>
+<!-- ToDo add footer -->
 
-<style></style>
-
+<style>
+</style>
