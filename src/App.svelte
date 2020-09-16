@@ -1,12 +1,15 @@
 <script>
 import router from './router';
+import Header from './components/header/Header.svelte'
+import Footer from './components/footer/Footer.svelte'
 </script>
 
-<!-- ToDo add header -->
-<main>
+<Header/>
+<main class="main container">
   <svelte:component this={router.page} queryParams="{router.queryParams}" />
 </main>
-<!-- ToDo add footer -->
+<Footer/>
 
-<style>
+<style global lang="scss">
+  @import "styles/global.scss";
 </style>

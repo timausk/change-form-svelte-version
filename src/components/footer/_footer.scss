@@ -1,0 +1,26 @@
+@import "../../styles/variables";
+
+.footer {
+  background: $black;
+
+  &__inner {
+    padding: 10px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__link {
+    color: $gray;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: $orange;
+  }
+}
