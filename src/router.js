@@ -1,5 +1,7 @@
 import page from 'page';
-import Contact from './views/Contact.svelte';
+
+// Views
+import Contact from './views/Contact/index.svelte';
 import Success from './views/Success.svelte';
 import Error from './views/Error.svelte';
 import Queue from './views/Queue.svelte';
@@ -8,10 +10,13 @@ import NotFound404 from './views/NotFound404.svelte';
 
 const router = {
     page: NotFound404,
-    queryParams: null
+    params: null
 };
 
-page('/contact/:id', (ctx, next) => {router.queryParams = ctx.params; next();}, () => router.page = Contact);
+page('/contact/:id', (ctx, next) => {
+    router.params = ctx.params;
+    next();
+}, () => router.page = Contact);
 page('/success', () => router.page = Success);
 page('/error', () => router.page = Error);
 page('/queue', () => router.page = Queue);

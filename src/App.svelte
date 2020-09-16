@@ -6,7 +6,7 @@ import Footer from './components/footer/Footer.svelte'
 
 <Header/>
 <main class="main container">
-  <svelte:component this={router.page} queryParams="{router.queryParams}" />
+  <svelte:component this={router.page} routeParams="{router.params}" />
 </main>
 <Footer/>
 
