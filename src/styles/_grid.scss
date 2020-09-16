@@ -1,0 +1,41 @@
+$columns: 12;
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    @include media('small-only') {
+        margin-bottom: 5px;
+
+        @for $i from 1 through $columns {
+            &.col-sm-#{$i} {
+                flex-basis: (100% / $columns) * $i;
+                max-width: (100% / $columns) * $i;
+            }
+        }
+    }
+
+    @include media('small-up') {
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        margin-bottom: 10px;
+
+        // % based cols
+        @for $i from 1 through $columns {
+            &.col-#{$i} {
+                flex-basis: (100% / $columns) * $i;
+                max-width: (100% / $columns) * $i;
+            }
+        }
+    }
+}
+
+.col-margin {
+    @include media('small-up') {
+        margin-right: 20px;
+    }
+    margin-right: 10px;
+}

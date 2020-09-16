@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  max-width: $content-max-width;
+  min-width: $content-min-width;
+  padding: 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

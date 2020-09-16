@@ -1,0 +1,11 @@
+@mixin media($type) {
+    @if $type == 'small-only' {
+        @media (max-width: $breakpoint-mobile - 1) {
+            @content;
+        }
+    } @else if $type == 'small-up' {
+        @media (min-width: $breakpoint-mobile) {
+            @content;
+        }
+    }
+}
